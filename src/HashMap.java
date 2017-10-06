@@ -39,15 +39,16 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
      * @param initialCapacity initial capacity of the backing array
      */
     public HashMap(int initialCapacity) {
-        table = new MapEntry[INITIAL_CAPACITY];
+        table = (MapEntry<K, V>[]) new MapEntry[initialCapacity];
         size = 0;
     }
 
     @Override
     public V put(K key, V value) {
         if (key == null || value == null) {
-            throw new IllegalArgumentException("Neither the added key ("
-                    + key + ") nor added value (" + value + ") can be null.");
+            throw new IllegalArgumentException("The key or value can't be "
+                    + "null");
+
         }
         if ((double) (size + 1) / table.length > MAX_LOAD_FACTOR) {
             resizeBackingTable(table.length * 2 + 1);
@@ -57,20 +58,20 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
 
     /**
      *
-     * @param key
-     * @param value
-     * @param index
-     * @return
+     * @param key the put key
+     * @param value the put value
+     * @param index the put index
+     * @return return the value to be placed
      */
     private V putHelper(K key, V value, int index) {
         if (table[index] == null || table[index].isRemoved()) {
-            table[index] = new MapEntry<>(key, value);
+            table[index] = new MapEntry(key, value);
             size++;
             return null;
         } else if (table[index].getKey().equals(key)) {
-            V out = table[index].getValue();
+            V value1 = table[index].getValue();
             table[index].setValue(value);
-            return out;
+            return value1;
         } else {
             return putHelper(key, value, (index + 1) % table.length);
         }
@@ -79,62 +80,61 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
     @Override
     public V remove(K key) {
         if (key == null) {
-            throw new IllegalArgumentException("Key cannot be null.");
+            throw new IllegalArgumentException("Key cannot be null");
         }
-        return removeHelper(key, hash(key));
-    }
-
-    /**
-     *
-     * @param key
-     * @param index
-     * @return
-     */
-    private V removeHelper(K key, int index) {
-        if (table[index] == null || table[index].isRemoved()) {
-            throw new NoSuchElementException("Cannot find key (" + key + ").");
-        } else if (table[index].getKey().equals(key)) {
-            V out = table[index].getValue();
-            table[index].setRemoved(true);
-            size--;
-            return out;
-        } else {
-            return removeHelper(key, (index + 1) % table.length);
+        V out;
+        int index = Math.abs(key.hashCode()) % table.length;
+        for (int i = 0; i < table.length; i++) {
+            if (table[index] != null && table[index].getKey().equals(key) && (!table[index].isRemoved())) {
+                out = table[index].getValue();
+                table[index].setRemoved(true);
+                size--;
+                return out;
+            }
+            index = (index + 1) % table.length;
         }
+        throw new NoSuchElementException("Key was not in map");
     }
 
     @Override
     public V get(K key) {
-        if (key == null) {
-            throw new IllegalArgumentException("Key cannot be null.");
-        }
+        checkForIllegalArgumentException(key);
         return getHelper(key, hash(key));
     }
 
     /**
      *
-     * @param key
-     * @param index
-     * @return
+     * @param key the get key
+     * @param index the remove index
+     * @return return
      */
     private V getHelper(K key, int index) {
         if (table[index] == null || table[index].isRemoved()) {
-            throw new NoSuchElementException("Cannot find key (" + key + ").");
+            return throwNoSuchElement(key);
         } else if (table[index].getKey().equals(key)) {
             return table[index].getValue();
         } else {
             return getHelper(key, (index + 1) % table.length);
         }
+
+
     }
 
     @Override
     public boolean containsKey(K key) {
-        try {
-            get(key);
-        } catch (NoSuchElementException e) {
-            return false;
+        if (key == null) {
+            throw new IllegalArgumentException("Key cannot be null");
         }
-        return true;
+        int index = Math.abs(key.hashCode()) % table.length;
+        for (int i = 0; i < table.length; i++) {
+            if (table[index] != null && table[index].getKey().equals(key) && (!table[index].isRemoved())) {
+                return true;
+            } else if (table[index] == null) {
+                return false;
+            }
+            index = (index + 1) % table.length;
+        }
+        return false;
     }
 
     @Override
@@ -151,40 +151,37 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
 
     @Override
     public Set<K> keySet() {
-        Set<K> keys = new HashSet<K>();
-        for (MapEntry<K, V> entry : table) {
-            if (entry != null
-                    && !entry.isRemoved()) {
-                keys.add(entry.getKey());
+        Set<K> kSet = new HashSet<>(size);
+        for (int i = 0; i < table.length; i++) {
+            if (table[i] != null && !table[i].isRemoved()) {
+                kSet.add(table[i].getKey());
             }
         }
-        return keys;
+        return kSet;
+
     }
 
     @Override
     public List<V> values() {
-        List<V> values = new ArrayList<>();
-        for (MapEntry<K, V> entry : table) {
-            if (entry != null && !entry.isRemoved()) {
-                values.add(entry.getValue());
+        List<V> vList= new ArrayList<>(size);
+        for (int i = 0; i < table.length; i++) {
+            if (table[i] != null && !table[i].isRemoved()) {
+                vList.add(table[i].getValue());
             }
         }
-        return values;
+        return vList;
     }
 
     @Override
     public void resizeBackingTable(int length) {
-        if (length < 0 || length < size) {
-            throw new IllegalArgumentException(
-                    "Table's new length cannot be less than" + "0 or size.");
-        }
+        illegalArgumentResize(length);
         size = 0;
-        MapEntry<K, V>[] temp = table;
+        MapEntry<K, V>[] mapEntries = table;
         table = new MapEntry[length];
-        for (MapEntry<K, V> entry : temp) {
+        for (MapEntry<K, V> entry : mapEntries) {
             if (entry != null && !entry.isRemoved()) {
-                putHelper(entry.getKey(), entry.getValue(), hash(entry
-                        .getKey()));
+                putHelper(entry.getKey(), entry.getValue(),
+                          hash(entry.getKey()));
             }
         }
     }
@@ -198,14 +195,44 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
 
     /**
      *
-     * @param key
-     * @return
+     * @param key the key that will go through the hach function
+     * @return the index to place between 0 and the end of the list
      */
     private int hash(K key) {
         if (key == null) {
             return 0;
         } else {
             return Math.abs(key.hashCode() % table.length);
+        }
+    }
+
+    /**
+     *
+     * @param key the key to check if it is null
+     */
+    private void checkForIllegalArgumentException(K key) {
+        if (key == null) {
+            throw new IllegalArgumentException("Key cannot be null.");
+        }
+    }
+
+    /**
+     *
+     * @param key the key to help throw a NoSuchElementException
+     * @return the exception being thrown
+     */
+    private V throwNoSuchElement(K key) {
+        throw new NoSuchElementException("Cannot find key (" + key + ").");
+    }
+
+    /**
+     *
+     * @param length the length to check if it is less than the size and 0
+     */
+    private void illegalArgumentResize(int length) {
+        if (length < 0 || length < size) {
+            throw new IllegalArgumentException(
+                    "Table's new length cannot be less than" + "0 or size.");
         }
     }
 }
