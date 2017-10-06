@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="158784ec-6d90-4b7d-a4b7-240d6c4506bc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashMap.java" afterPath="$PROJECT_DIR$/src/HashMap.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,30 +17,29 @@
       <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2373">
-              <caret line="155" column="5" lean-forward="false" selection-start-line="155" selection-start-column="5" selection-end-line="155" selection-end-column="5" />
+            <state relative-caret-position="3591">
+              <caret line="171" column="22" lean-forward="true" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#HashMap#0" expanded="true" />
                 <element signature="docComment;method#HashMap#0;class#HashMap#0" expanded="true" />
-                <element signature="e#724#725#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#670#671#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
                 <element signature="docComment;method#HashMap#1;class#HashMap#0" expanded="true" />
                 <element signature="method#HashMap#1;class#HashMap#0" expanded="true" />
                 <element signature="method#put#0;class#HashMap#0" expanded="true" />
                 <element signature="docComment;method#putHelper#0;class#HashMap#0" expanded="true" />
                 <element signature="method#putHelper#0;class#HashMap#0" expanded="true" />
                 <element signature="method#remove#0;class#HashMap#0" expanded="true" />
-                <element signature="docComment;method#remove#1;class#HashMap#0" expanded="true" />
-                <element signature="method#remove#1;class#HashMap#0" expanded="true" />
+                <element signature="docComment;method#removeHelper#0;class#HashMap#0" expanded="true" />
+                <element signature="method#removeHelper#0;class#HashMap#0" expanded="true" />
                 <element signature="method#get#0;class#HashMap#0" expanded="true" />
-                <element signature="docComment;method#get#1;class#HashMap#0" expanded="true" />
-                <element signature="method#get#1;class#HashMap#0" expanded="true" />
+                <element signature="docComment;method#getHelper#0;class#HashMap#0" expanded="true" />
+                <element signature="method#getHelper#0;class#HashMap#0" expanded="true" />
                 <element signature="method#containsKey#0;class#HashMap#0" expanded="true" />
                 <element signature="method#clear#0;class#HashMap#0" expanded="true" />
                 <element signature="method#size#0;class#HashMap#0" expanded="true" />
                 <element signature="method#keySet#0;class#HashMap#0" expanded="true" />
-                <element signature="method#values#0;class#HashMap#0" expanded="true" />
                 <element signature="method#resizeBackingTable#0;class#HashMap#0" expanded="true" />
                 <element signature="method#getTable#0;class#HashMap#0" expanded="true" />
                 <element signature="docComment;method#hash#0;class#HashMap#0" expanded="true" />
@@ -306,6 +304,9 @@
     <history-entry file="HashMapStudentTests - 2017.10.06 at 15h 16m 12s.xml">
       <configuration name="HashMapStudentTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HashMapStudentTests - 2017.10.06 at 15h 23m 28s.xml">
+      <configuration name="HashMapStudentTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1551" height="839" extended-state="6" />
@@ -317,11 +318,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34365326" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286004" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3166124" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32927653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833877" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -356,24 +357,23 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#HashMap#0;class#HashMap#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
             <element signature="docComment;method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#put#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#remove#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#remove#1;class#HashMap#0" expanded="true" />
-            <element signature="method#remove#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#removeHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#removeHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#get#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#get#1;class#HashMap#0" expanded="true" />
-            <element signature="method#get#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#getHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#getHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#containsKey#0;class#HashMap#0" expanded="true" />
             <element signature="method#clear#0;class#HashMap#0" expanded="true" />
             <element signature="method#size#0;class#HashMap#0" expanded="true" />
             <element signature="method#keySet#0;class#HashMap#0" expanded="true" />
-            <element signature="method#values#0;class#HashMap#0" expanded="true" />
             <element signature="method#resizeBackingTable#0;class#HashMap#0" expanded="true" />
             <element signature="method#getTable#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#hash#0;class#HashMap#0" expanded="true" />
@@ -426,24 +426,23 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#HashMap#0;class#HashMap#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
             <element signature="docComment;method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#put#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#remove#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#remove#1;class#HashMap#0" expanded="true" />
-            <element signature="method#remove#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#removeHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#removeHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#get#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#get#1;class#HashMap#0" expanded="true" />
-            <element signature="method#get#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#getHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#getHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#containsKey#0;class#HashMap#0" expanded="true" />
             <element signature="method#clear#0;class#HashMap#0" expanded="true" />
             <element signature="method#size#0;class#HashMap#0" expanded="true" />
             <element signature="method#keySet#0;class#HashMap#0" expanded="true" />
-            <element signature="method#values#0;class#HashMap#0" expanded="true" />
             <element signature="method#resizeBackingTable#0;class#HashMap#0" expanded="true" />
             <element signature="method#getTable#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#hash#0;class#HashMap#0" expanded="true" />
@@ -496,24 +495,23 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#HashMap#0;class#HashMap#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
             <element signature="docComment;method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#put#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#remove#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#remove#1;class#HashMap#0" expanded="true" />
-            <element signature="method#remove#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#removeHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#removeHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#get#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#get#1;class#HashMap#0" expanded="true" />
-            <element signature="method#get#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#getHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#getHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#containsKey#0;class#HashMap#0" expanded="true" />
             <element signature="method#clear#0;class#HashMap#0" expanded="true" />
             <element signature="method#size#0;class#HashMap#0" expanded="true" />
             <element signature="method#keySet#0;class#HashMap#0" expanded="true" />
-            <element signature="method#values#0;class#HashMap#0" expanded="true" />
             <element signature="method#resizeBackingTable#0;class#HashMap#0" expanded="true" />
             <element signature="method#getTable#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#hash#0;class#HashMap#0" expanded="true" />
@@ -566,24 +564,23 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#HashMap#0;class#HashMap#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
             <element signature="docComment;method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#put#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#remove#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#remove#1;class#HashMap#0" expanded="true" />
-            <element signature="method#remove#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#removeHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#removeHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#get#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#get#1;class#HashMap#0" expanded="true" />
-            <element signature="method#get#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#getHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#getHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#containsKey#0;class#HashMap#0" expanded="true" />
             <element signature="method#clear#0;class#HashMap#0" expanded="true" />
             <element signature="method#size#0;class#HashMap#0" expanded="true" />
             <element signature="method#keySet#0;class#HashMap#0" expanded="true" />
-            <element signature="method#values#0;class#HashMap#0" expanded="true" />
             <element signature="method#resizeBackingTable#0;class#HashMap#0" expanded="true" />
             <element signature="method#getTable#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#hash#0;class#HashMap#0" expanded="true" />
@@ -666,30 +663,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2373">
-          <caret line="155" column="5" lean-forward="false" selection-start-line="155" selection-start-column="5" selection-end-line="155" selection-end-column="5" />
+        <state relative-caret-position="3591">
+          <caret line="171" column="22" lean-forward="true" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#HashMap#0;class#HashMap#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
             <element signature="docComment;method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#HashMap#1;class#HashMap#0" expanded="true" />
             <element signature="method#put#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#putHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#remove#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#remove#1;class#HashMap#0" expanded="true" />
-            <element signature="method#remove#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#removeHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#removeHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#get#0;class#HashMap#0" expanded="true" />
-            <element signature="docComment;method#get#1;class#HashMap#0" expanded="true" />
-            <element signature="method#get#1;class#HashMap#0" expanded="true" />
+            <element signature="docComment;method#getHelper#0;class#HashMap#0" expanded="true" />
+            <element signature="method#getHelper#0;class#HashMap#0" expanded="true" />
             <element signature="method#containsKey#0;class#HashMap#0" expanded="true" />
             <element signature="method#clear#0;class#HashMap#0" expanded="true" />
             <element signature="method#size#0;class#HashMap#0" expanded="true" />
             <element signature="method#keySet#0;class#HashMap#0" expanded="true" />
-            <element signature="method#values#0;class#HashMap#0" expanded="true" />
             <element signature="method#resizeBackingTable#0;class#HashMap#0" expanded="true" />
             <element signature="method#getTable#0;class#HashMap#0" expanded="true" />
             <element signature="docComment;method#hash#0;class#HashMap#0" expanded="true" />

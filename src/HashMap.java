@@ -7,10 +7,10 @@ import java.util.NoSuchElementException;
 /**
  * Your implementation of HashMap.
  *
- * @author YOUR NAME HERE
- * @userid YOUR USER ID HERE (i.e. gburdell3)
- * @GTID YOUR GT ID HERE (i.e. 900000000)
- * @version 1.0
+ * @author Ahmed Gedi
+ * @userid agedi3
+ * @GTID 903197142
+ * @version 1.44
  */
 public class HashMap<K, V> implements HashMapInterface<K, V> {
 
@@ -47,10 +47,7 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
     public V put(K key, V value) {
         if (key == null || value == null) {
             throw new IllegalArgumentException("Neither the added key ("
-                    + key
-                    + ") nor added value ("
-                    + value
-                    + ") can be null.");
+                    + key + ") nor added value (" + value + ") can be null.");
         }
         if ((double) (size + 1) / table.length > MAX_LOAD_FACTOR) {
             resizeBackingTable(table.length * 2 + 1);
@@ -66,8 +63,7 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
      * @return
      */
     private V putHelper(K key, V value, int index) {
-        if (table[index] == null
-                || table[index].isRemoved()) {
+        if (table[index] == null || table[index].isRemoved()) {
             table[index] = new MapEntry<>(key, value);
             size++;
             return null;
@@ -85,8 +81,7 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
         if (key == null) {
             throw new IllegalArgumentException("Key cannot be null.");
         }
-        System.out.println("Removing <" + key + ">");
-        return remove(key, hash(key));
+        return removeHelper(key, hash(key));
     }
 
     /**
@@ -95,29 +90,25 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
      * @param index
      * @return
      */
-    private V remove(K key, int index) {
-        if (table[index] == null
-                || table[index].isRemoved()) {
-            throw new NoSuchElementException("Cannot find key ("
-                    + key
-                    + ").");
+    private V removeHelper(K key, int index) {
+        if (table[index] == null || table[index].isRemoved()) {
+            throw new NoSuchElementException("Cannot find key (" + key + ").");
         } else if (table[index].getKey().equals(key)) {
             V out = table[index].getValue();
             table[index].setRemoved(true);
             size--;
             return out;
         } else {
-            return remove(key, (index + 1) % table.length);
+            return removeHelper(key, (index + 1) % table.length);
         }
     }
 
     @Override
     public V get(K key) {
         if (key == null) {
-            throw new IllegalArgumentException(
-                    "Key cannot be null.");
+            throw new IllegalArgumentException("Key cannot be null.");
         }
-        return get(key, hash(key));
+        return getHelper(key, hash(key));
     }
 
     /**
@@ -126,16 +117,13 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
      * @param index
      * @return
      */
-    private V get(K key, int index) {
-        if (table[index] == null
-                || table[index].isRemoved()) {
-            throw new NoSuchElementException("Cannot find key ("
-                    + key
-                    + ").");
+    private V getHelper(K key, int index) {
+        if (table[index] == null || table[index].isRemoved()) {
+            throw new NoSuchElementException("Cannot find key (" + key + ").");
         } else if (table[index].getKey().equals(key)) {
             return table[index].getValue();
         } else {
-            return get(key, (index + 1) % table.length);
+            return getHelper(key, (index + 1) % table.length);
         }
     }
 
@@ -188,8 +176,7 @@ public class HashMap<K, V> implements HashMapInterface<K, V> {
     public void resizeBackingTable(int length) {
         if (length < 0 || length < size) {
             throw new IllegalArgumentException(
-                    "Table's new length cannot be less than"
-                            + "0 or size.");
+                    "Table's new length cannot be less than" + "0 or size.");
         }
         size = 0;
         MapEntry<K, V>[] temp = table;
